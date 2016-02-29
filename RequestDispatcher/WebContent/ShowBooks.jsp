@@ -5,19 +5,70 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="stylesheet" href="Styles/Styles.css" />
 <title>Insert title here</title>
 </head>
 <body>
 
+
+
 	<%
 		Book book=null;
 		ArrayList<Book> bookList = (ArrayList<Book>) request.getAttribute("foundBooks");
-		for(Iterator itr = bookList.iterator();itr.hasNext();)
+
+	%>
+	<table align="center" border="2">
+		<thead>
+			<tr>
+				<td>Book Number</td>
+				<td>Book Name</td>
+				<td>Author</td>
+				<td>Price</td>
+			</tr>
+		</thead>
+	
+		<tbody>
+			<%
+			for(Iterator<Book> itr = bookList.iterator();itr.hasNext();)
+			{
+				book = (Book)itr.next();
+			%>
+			<tr>
+				<td>
+					<%=book.getBookNumber() %>
+				</td>
+				<td>
+					<%=book.getBookName() %>
+				</td>
+				<td>
+					<%=book.getAuthor() %>
+				</td>
+				<td>
+					<%=book.getPrice() %>
+				</td>
+			</tr>
+		
+			<%
+			}
+			%>
+		</tbody>
+	
+	</table>
+	
+	
+	
+	
+	
+	
+	<%--
+		for(Iterator<Book> itr = bookList.iterator();itr.hasNext();)
 		{
 			book = (Book)itr.next();
 			out.println(book.toString());
+			out.println("<br>");
 		}
-	%>
+	--%>
 
 </body>
 </html>
