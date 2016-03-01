@@ -29,4 +29,14 @@
     <servlet-name>FirstServlet</servlet-name>
     <url-pattern>/FirstServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchBook</display-name>
+    <servlet-name>SearchBook</servlet-name>
+    <servlet-class>com.training.servlets.SearchBook</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchBook</servlet-name>
+    <url-pattern>/SearchBook</url-pattern>
+  </servlet-mapping>
 </web-app>

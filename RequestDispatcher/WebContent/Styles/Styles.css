@@ -3,3 +3,6 @@
 thead,tbody,tr,td{
 	text-align: center;
 }
+thead{
+	font-weight: bold;
+}

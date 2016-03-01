@@ -4,16 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Search Book By ID</title>
+<link rel="stylesheet" href="Styles/Styles.css" />
 </head>
 <body>
 
+<form action="BookServlet" method="post">
+<table>
 
-	New Session =
-	<span style="color: red"> <%=session.isNew()%></span> 
-	Session ID =
-	<span style="color: blue"> <%=session.getId()%></span>
 
+</table>
+
+</form>
 
 </body>
 </html>
